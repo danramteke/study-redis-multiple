@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports: 
+      - 8080:80
+    environment:
+      - REDIS_1_URL=redis://redis1
+      - REDIS_2_URL=redis://redis2
+    depends_on: [redis1, redis2]
+
+  redis1:
+    image: redis
+    ports:
+      - 6379:6379
+
+  redis2:
+    image: redis
+    ports:
+      - 6380:6379
