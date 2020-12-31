@@ -1,6 +1,6 @@
 # study-redis-multiple
 
-Studying how to provide multiple redis instances to a vapor app.
+Studying how to provide multiple redis instances to a Vapor 4 app.
 
 ```
 docker run --rm -p 6001:6379 redis
